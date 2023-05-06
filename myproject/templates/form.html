@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="#" method="get">
+        <h1>{{output}}</h1>
+
+        <div>
+            <label for="">Value 1</label>
+            <input type="text" name="num1" id="">
+        </div>
+        <div>
+            <label for="">Value 2</label>
+            <input type="text" name="num2" id="">
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form> -->
+
+    <form action="#" method="post">
+        {% csrf_token %}
+        <h1>{{output}}</h1>
+
+        <div>
+            <label for="">Value 1</label>
+            <input type="text" name="num1" id="">
+        </div>
+        <div>
+            <label for="">Value 2</label>
+            <input type="text" name="num2" id="">
+        </div>
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</body>
+</html>

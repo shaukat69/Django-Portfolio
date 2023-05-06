@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SA Portfolio</title>
+    <link rel="shortcut icon" href="/static/fav-icon.ico" type="image/x-icon" />
+    <!-- Link CSS File  -->
+    <link rel="stylesheet" href="/static/style.css" />
+    <!-- Font Awesome Link  -->
+    <script
+      src="https://kit.fontawesome.com/1f9dbc5d2c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+
+    <div class="row">
+      {% for n in serviceData %}
+      <div class="col-md-3">
+        <span>{{n.service_icon}}</span>
+        <h4>{{n.service_title}}</h4>
+        <p>{{n.service_des | safe | upper}}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% include "header.html" %}
+    <div
+      id="header"
+      style="background-image: url('static/image/background.png'); background-repeat:no-repeat"
+    >
+      <div class="container">
+        <div class="header-text">
+          <p>UI/UX Designer</p>
+          <h1>
+            Hi, I'm <span>Shaukat Ali</span> <br />
+            Hamdule From India
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home  -->
+
+
+    <!-- Home  -->
+
+    {% comment %}
+    <!-- ----------------- About Section -------------------- -->
+    {% endcomment %}
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="static/image/user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              qui, labore laborum sed fuga alias accusantium repellendus
+              dignissimos doloremque quia temporibus perspiciatis? Aspernatur
+              alias nobis, mollitia iusto nostrum quaerat tempore. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Quod, iusto. Lorem
+              ipsum dolor sit amet.
+            </p>
+
+            {% comment %}
+            <!-- ----------------------- Tab Links ----------------------- -->
+            {% endcomment %}
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('eucation')">Eductaion</p>
+            </div>
+            {% comment %}
+            <!-- ----------------------- Tab Links ----------------------- -->
+            {% endcomment %} {% comment %}
+            <!-- ----------------------- Tab Contents ----------------------- -->
+            {% endcomment %}
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/App Interface</li>
+                <li><span>Web Development</span><br />Web App Development</li>
+                <li>
+                  <span>App Development</span><br />Building Android/iOS Apps
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2022 - Current</span><br />UI/UX Design Training ar ET
+                  Institute
+                </li>
+                <li><span>2019 - 2021</span><br />Team Lead At StarApp LLC.</li>
+                <li>
+                  <span>2016 - 2017</span><br />Internship at ekart eCommerce.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="eucation">
+              <ul>
+                <li><span>2022</span><br />Msc From Mumbai University</li>
+                <li><span>2021</span><br />Bsc From Mumbai University</li>
+              </ul>
+            </div>
+            {% comment %}
+            <!-- ----------------------- Tab Content ----------------------- -->
+            {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %}
+    <!-- ----------------- About Section -------------------- -->
+    {% endcomment %} {% comment %}
+    <!-- ----------------- Services Section -------------------- -->
+    {% endcomment %}
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Servies</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Provident cupiditate ratione voluptatum error, excepturi odit eos
+              assumenda omnis explicabo aspernatur?
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Provident cupiditate ratione voluptatum error, excepturi odit eos
+              assumenda omnis explicabo aspernatur?
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Provident cupiditate ratione voluptatum error, excepturi odit eos
+              assumenda omnis explicabo aspernatur?
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %}
+    <!-- ----------------- Services Section -------------------- -->
+    {% endcomment %} {% comment %}
+    <!-- ----------------- Portfolio Section -------------------- -->
+    {% endcomment %}
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="static/work-1.png" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam, sint! Lorem ipsum dolor sit amet.
+              </p>
+              <a href=""><i class="fa-solid fa-external-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="static/work-2.png" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam, sint! Lorem ipsum dolor sit amet.
+              </p>
+              <a href=""><i class="fa-solid fa-external-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="static/work-3.png" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam, sint! Lorem ipsum dolor sit amet.
+              </p>
+              <a href=""><i class="fa-solid fa-external-link"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+
+    {% comment %}
+    <!-- ----------------- Portfolio Section -------------------- -->
+    {% endcomment %} {% comment %}
+    <!-- ----------------- Contact Section -------------------- -->
+    {% endcomment %}
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+            <p><i class="fa-solid fa-phone-square"></i> 9923086963</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="static/my-cv.pdf" class="btn btn2" download>Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      {% comment %}
+      <!-- ----------------- Contact Section -------------------- -->
+      {% endcomment %} 
+      
+    </div>
+    {% include "footer.html" %}
+  </body>
+</html>

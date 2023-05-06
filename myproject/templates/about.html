@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SA | About Us</title>
+</head>
+<body>
+
+    {% include "header.html" %}
+
+   {% comment %} <!-- ----------------- About Section -------------------- --> {% endcomment %}
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/static/image/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat qui, labore laborum sed fuga alias accusantium repellendus dignissimos doloremque quia temporibus perspiciatis? Aspernatur alias nobis, mollitia iusto nostrum quaerat tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iusto. Lorem ipsum dolor sit amet.</p>
+
+                    {% comment %} <!-- ----------------------- Tab Links ----------------------- --> {% endcomment %}
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('eucation')">Eductaion</p>
+                    </div>
+                    {% comment %} <!-- ----------------------- Tab Links ----------------------- --> {% endcomment %}
+
+                    {% comment %} <!-- ----------------------- Tab Contents ----------------------- --> {% endcomment %}
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>UI/UX Design Training ar ET Institute</li>
+                            <li><span>2019 - 2021</span><br>Team Lead At StarApp LLC.</li>
+                            <li><span>2016 - 2017</span><br>Internship at ekart eCommerce.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="eucation">
+                        <ul>
+                            <li><span>2022</span><br>Msc From Mumbai University</li>
+                            <li><span>2021</span><br>Bsc From Mumbai University</li>
+                        </ul>
+                    </div>
+                    {% comment %} <!-- ----------------------- Tab Content ----------------------- --> {% endcomment %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% comment %} <!-- ----------------- About Section -------------------- --> {% endcomment %}
+
+            
+{% include "footer.html" %}
+    </div>
+
+</body>
+</html>

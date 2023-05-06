@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="{% url 'submitform' %}" method="post">
+        {% csrf_token %}
+        <!-- <div>
+            <label for="">Value 1</label>
+            <input type="number" name="num1" id="">
+        </div>
+        <div>
+            <label for="">Value 1</label>
+            <input type="number" name="num2" id="">
+        </div> -->
+        <div>
+            {{form}}
+        </div>
+        <div>
+            <button type="submit">Save</button>
+            <input type="text" value="{{output}}">
+        </div>
+    </form>
+</body>
+</html>

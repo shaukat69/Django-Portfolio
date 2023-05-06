@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+
+    {%for n in clist%}
+    <div>{{n}}</div>
+    {% endfor %}
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aperiam saepe amet fugit! Repellendus facere, vero error vel delectus at?</p>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+        {%for d in student_details%}
+        <tr>
+            <td>{{d.Name}}</td>
+            <td>{{d.Phone}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+
+    <!-- {% for x in numbers %}
+        {% if x > 20 %}
+            <div>{{x}}</div>
+        {% endif %}
+    {% endfor %} -->
+
+{% if numbers|length > 5 %}
+    {% for x in numbers %}
+        {% if x > 20 %}
+            <div>{{x}}</div>
+        {% endif %}
+    {% endfor %}
+{% else %}
+    No Data Found
+{% endif %}
+
+</body>
+</html>
